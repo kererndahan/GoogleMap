@@ -1,15 +1,18 @@
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.TestName;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,18 +21,23 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Sanity {
-    public static WebDriver driver;
-    public static WebDriverWait wait;
+    private static WebDriver driver;
+    private static WebDriverWait wait;
     private static Helper myHelper = new Helper();
     private static DBActions myDB = new DBActions();
 
 
     @Rule
     public TestName name = new TestName();
-    // report location & details
-//    public static ExtentReports extent = new ExtentReports(".//report.html", false);
-//    public static ExtentTest test = extent.startTest("Buy me! ", "Keren's Automation project");
+    // report locations & details
+    // report locations & details
+    //public static ExtentReports extent = new ExtentReports("C://Users//Keren//Desktop//report.html", false);
+    //public static ExtentTest test = extent.startTest("Buy me! ", "Keren's Automation project");
 
+
+    //public static ExtentHtmlReporter extent = new ExtentHtmlReporter(".//report.html", false);
+//    public static ExtentTest test = extent.startTest("Buy me! ", "Keren's Automation project");
+    //ExtentHtmlReporter
 
     @BeforeClass
     public static void beforeMyClass() throws SQLException, ClassNotFoundException {
@@ -58,10 +66,18 @@ public class Sanity {
  driver = new ChromeDriver();
      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
      driver.get(myURL);
-     driver.findElement(By.id("searchboxinput")).sendKeys(mySearch);
-     driver.findElement(By.cssSelector("div.suggest-left-cell")).click();
+     WebElement searchbox=  driver.findElement(By.id("searchboxinput"));
+     Actions builder = new Actions(driver);
+     Actions actions = builder;
+     actions.moveToElement(searchbox);
+     actions.click();
+     actions.sendKeys(mySearch);
+     actions.sendKeys(Keys.ENTER);
+     Action seriesOfActions = actions.build();
+     seriesOfActions.perform() ;
+     WebElement result = driver.findElement(By.cssSelector("section-hero-header-title"));
 
-
+     System.out.println(result.getText());
  }
 
     public static void setDriverAccordingToBrowser(String browser,String URL){
