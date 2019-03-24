@@ -16,8 +16,10 @@ public class CurrencyAPI {
 
         OkHttpClient client = new OkHttpClient();
         String myAPIKy = "AIzaSyDPncBYn__D0MO2C9oW59CVoD0-d-eqetk";
+        String DanielKey = "AIzaSyCu2vjNMuQDCQSB67-2zsJRXkvQYgFSW64";
+
         String mySearch = "HaNofar Street 3, Netanya";
-        String myURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query="+mySearch+"&key="+myAPIKy;
+        String myURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query="+mySearch+"&key="+DanielKey;
         Request request = new Request.Builder()
                 .url(myURL)
                 .build();

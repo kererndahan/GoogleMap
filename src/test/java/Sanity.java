@@ -25,6 +25,8 @@ public class Sanity {
     private static WebDriverWait wait;
     private static Helper myHelper = new Helper();
     private static DBActions myDB = new DBActions();
+    private static GMapRest myrest = new GMapRest();
+
 
 
     @Rule
@@ -41,14 +43,14 @@ public class Sanity {
 
     @BeforeClass
     public static void beforeMyClass() throws SQLException, ClassNotFoundException {
-        String browserType = myHelper.getData("browser");
+        /*String browserType = myHelper.getData("browser");
         String myURL= myDB.getaInfo("URL");
-        String mySearch= myDB.getaInfo("mySearch");
+        String mySearch= myDB.getaInfo("mySearch");*/
 
 //        String mysearch =
-        setDriverAccordingToBrowser(browserType,myURL);// (driver,browserType);
-        myHelper.openURL(myURL,driver);
-                wait = new WebDriverWait(driver, 30);
+        //setDriverAccordingToBrowser(browserType,myURL);// (driver,browserType);
+        /*myHelper.openURL(myURL,driver);
+                wait = new WebDriverWait(driver, 30);*/
 //        extent.addSystemInfo("Environment","Production");
 //        test.log(LogStatus.INFO, "Selected Browser", browserType);
      /* After driver & Wait are Intialized in Helper can use Class constractors *////
@@ -60,18 +62,24 @@ public class Sanity {
         String email = "kerenstore07+" + Integer.toString(randomNum) + "@gmail.com";
         //test.log(LogStatus.INFO, "Logging you in....");
         /***************Browse to google map**********************************/
- System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
-     String myURL= myDB.getaInfo("URL");
-     String mySearch= myDB.getaInfo("mySearch");
- driver = new ChromeDriver();
-     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-     driver.get(myURL);
-     WebElement searchbox=  driver.findElement(By.id("searchboxinput"));
-     Actions builder = new Actions(driver);
-     Actions actions = builder;
-     actions.moveToElement(searchbox);
-     actions.click();
-     actions.sendKeys(mySearch);
+        System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
+        /*String myURL= myDB.getaInfo("URL");
+        String mySearch= myDB.getaInfo("mySearch");*/
+        String myjson= myrest.GetJsonLine();
+        myrest.parse(myjson);
+        String lat = Double.toString(myrest.getLat());
+        String lng = Double.toString(myrest.getLng());
+        String mySearch = lat + "," + lng ;
+        String myURL = "https://www.google.com/maps";
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get(myURL);
+        WebElement searchbox=  driver.findElement(By.id("searchboxinput"));
+        Actions builder = new Actions(driver);
+        Actions actions = builder;
+        actions.moveToElement(searchbox);
+        actions.click();
+        actions.sendKeys(mySearch);
      actions.sendKeys(Keys.ENTER);
      Action seriesOfActions = actions.build();
      seriesOfActions.perform() ;
