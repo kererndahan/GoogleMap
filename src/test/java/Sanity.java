@@ -19,6 +19,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 
+import static junit.framework.TestCase.assertTrue;
+
 
 public class Sanity {
     private static WebDriver driver;
@@ -43,17 +45,6 @@ public class Sanity {
 
     @BeforeClass
     public static void beforeMyClass() throws SQLException, ClassNotFoundException {
-        /*String browserType = myHelper.getData("browser");
-        String myURL= myDB.getaInfo("URL");
-        String mySearch= myDB.getaInfo("mySearch");*/
-
-//        String mysearch =
-        //setDriverAccordingToBrowser(browserType,myURL);// (driver,browserType);
-        /*myHelper.openURL(myURL,driver);
-                wait = new WebDriverWait(driver, 30);*/
-//        extent.addSystemInfo("Environment","Production");
-//        test.log(LogStatus.INFO, "Selected Browser", browserType);
-     /* After driver & Wait are Intialized in Helper can use Class constractors *////
 
     }
  @Test
@@ -69,6 +60,7 @@ public class Sanity {
         myrest.parse(myjson);
         String lat = Double.toString(myrest.getLat());
         String lng = Double.toString(myrest.getLng());
+        String searchtext = myrest.getSearch();
         String mySearch = lat + "," + lng ;
         String myURL = "https://www.google.com/maps";
         driver = new ChromeDriver();
@@ -83,9 +75,12 @@ public class Sanity {
      actions.sendKeys(Keys.ENTER);
      Action seriesOfActions = actions.build();
      seriesOfActions.perform() ;
-     WebElement result = driver.findElement(By.cssSelector("section-hero-header-title"));
+     WebElement searchresult = driver.findElement(By.cssSelector("#pane div:nth-child(5) span.widget-pane-link"));
+     String actualString = searchresult.getText();
+     System.out.println(actualString);
+     assertTrue(actualString.contains(searchtext));
 
-     System.out.println(result.getText());
+     //System.out.println(result.getText());
  }
 
     public static void setDriverAccordingToBrowser(String browser,String URL){
