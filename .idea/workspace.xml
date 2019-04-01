@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ea9a363-8670-4274-88da-16bcfdfc5a57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/GMapRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ExtentReportsClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LogGenerateJava.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CurrencyAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CurrencyAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Sanity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sanity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sanity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sanity.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,22 +19,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DBActions.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Sanity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="93" column="1" lean-forward="true" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+            <state relative-caret-position="83">
+              <caret line="120" column="42" selection-start-line="120" selection-start-column="42" selection-end-line="120" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7299#7300#0" expanded="true" />
+                <element signature="e#7329#7330#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Sanity.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+              <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ExtentReportsClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="93" column="22" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4719#4720#0" expanded="true" />
+                <element signature="e#4749#4750#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/GMapRest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="109">
+              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/CurrencyAPI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+              <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -63,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -72,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/RestTestCurrencyAPI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,19 +99,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Place.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Helper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,8 +133,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FileUtils</find>
+      <find>ExtentTest</find>
       <find>test</find>
+      <find>info</find>
+      <find>FileUtils</find>
+      <find>getScreenShot</find>
+      <find>chrome</find>
+      <find>result</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,7 +150,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/Helper.java" />
         <option value="$PROJECT_DIR$/src/test/java/DBActions.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/location.java" />
         <option value="$PROJECT_DIR$/src/test/java/geometry.java" />
         <option value="$PROJECT_DIR$/src/test/java/GmapResult.java" />
@@ -147,8 +160,11 @@
         <option value="$PROJECT_DIR$/src/test/java/RestTestCurrencyAPI.java" />
         <option value="$PROJECT_DIR$/src/test/java/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/CurrencyAPI.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Sanity.java" />
         <option value="$PROJECT_DIR$/src/test/java/GMapRest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LogGenerateJava.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ExtentReportsClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Sanity.java" />
       </list>
     </option>
   </component>
@@ -175,20 +191,7 @@
             <path>
               <item name="GoogleMap" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoogleMap" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoogleMap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoogleMap" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoogleMap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoogleMap" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="TestResults" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -218,14 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Sanity">
-    <configuration name="CurrencyAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CurrencyAPI" />
-      <module name="GoogleMap" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.Sanity">
     <configuration name="GMapRest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GMapRest" />
       <module name="GoogleMap" />
@@ -233,16 +229,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="LogGenerateJava" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GoogleMap" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RestTestCurrencyAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RestTestCurrencyAPI" />
-      <module name="GoogleMap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LogGenerateJava" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -256,13 +247,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExtentReportsClass" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="GoogleMap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExtentReportsClass" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sanity" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="GoogleMap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Sanity" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Sanity" />
+        <item itemvalue="TestNG.ExtentReportsClass" />
+        <item itemvalue="JUnit.LogGenerateJava" />
         <item itemvalue="JUnit.Sanity" />
         <item itemvalue="Application.GMapRest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.RestTestCurrencyAPI" />
-        <item itemvalue="Application.CurrencyAPI" />
       </list>
     </recent_temporary>
   </component>
@@ -277,44 +290,60 @@
       <option name="presentableId" value="Default" />
       <updated>1552666461177</updated>
     </task>
+    <task id="LOCAL-00001" summary="Compelte project - all but reports">
+      <created>1553397927828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553397927828</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Compelte project - all but reports">
+      <created>1553503100611</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553503100611</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Sanity - 2019.03.15 at 20h 29m 50s.xml">
+    <history-entry file="Sanity - 2019.04.01 at 12h 33m 37s.xml">
       <configuration name="Sanity" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.15 at 20h 30m 32s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="LogGenerateJava - 2019.04.01 at 12h 38m 41s.xml">
+      <configuration name="LogGenerateJava" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.22 at 13h 31m 48s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="LogGenerateJava - 2019.04.01 at 12h 39m 19s.xml">
+      <configuration name="LogGenerateJava" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.22 at 13h 38m 27s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="LogGenerateJava - 2019.04.01 at 13h 03m 07s.xml">
+      <configuration name="LogGenerateJava" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.22 at 13h 39m 26s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="ExtentReportsClass - 2019.04.01 at 13h 35m 36s.xml">
+      <configuration name="ExtentReportsClass" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.22 at 13h 40m 12s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="ExtentReportsClass - 2019.04.01 at 13h 37m 27s.xml">
+      <configuration name="ExtentReportsClass" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.22 at 13h 43m 52s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="ExtentReportsClass - 2019.04.01 at 13h 42m 32s.xml">
+      <configuration name="ExtentReportsClass" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.22 at 13h 44m 50s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="ExtentReportsClass - 2019.04.01 at 13h 54m 50s.xml">
+      <configuration name="ExtentReportsClass" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.24 at 05h 08m 56s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="ExtentReportsClass - 2019.04.01 at 14h 27m 46s.xml">
+      <configuration name="ExtentReportsClass" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Sanity - 2019.03.24 at 05h 10m 56s.xml">
-      <configuration name="Sanity" configurationId="JUnit" />
+    <history-entry file="Sanity - 2019.04.01 at 14h 27m 59s.xml">
+      <configuration name="Sanity" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26153848" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26153848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -322,7 +351,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5115453" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5168739" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -339,18 +368,15 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Compelte project - all but reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compelte project - all but reports" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -379,38 +405,28 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/DBActions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="93" column="1" lean-forward="true" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GMapRest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Place.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CurrencyAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -420,7 +436,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -437,19 +453,60 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/RestTestCurrencyAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Sanity.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/GMapRest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+        <state relative-caret-position="109">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LogGenerateJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ExtentReportsClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="93" column="22" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4719#4720#0" expanded="true" />
+            <element signature="e#4749#4750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Sanity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="120" column="42" selection-start-line="120" selection-start-column="42" selection-end-line="120" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7299#7300#0" expanded="true" />
+            <element signature="e#7329#7330#0" expanded="true" />
           </folding>
         </state>
       </provider>

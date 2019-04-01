@@ -1,18 +1,12 @@
+//package myExtentReport;
+
 import java.io.File;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -24,20 +18,11 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import static com.aventstack.extentreports.Status.INFO;
-import static junit.framework.TestCase.assertTrue;
-
-
-public class Sanity {
-    private static WebDriver driver;
-    private static WebDriverWait wait;
-    private static Helper myHelper = new Helper();
-    private static DBActions myDB = new DBActions();
-    private static GMapRest myrest = new GMapRest();
+public class ExtentReportsClass {
+    public WebDriver driver;
     public ExtentHtmlReporter htmlReporter;
     public ExtentReports extent;
     public ExtentTest logger;
-
 
     @BeforeTest
     public void startReport() {
@@ -48,14 +33,15 @@ public class Sanity {
         extent.setSystemInfo("Host Name", "SoftwareTestingMaterial");
         extent.setSystemInfo("Environment", "Production");
         extent.setSystemInfo("User Name", "Keren Dahan");
-        htmlReporter.config().setDocumentTitle("Test Of Google Map! ");
+        htmlReporter.config().setDocumentTitle("Title of the Report Comes here ");
         // Name of the report
-        htmlReporter.config().setReportName("GoogleMapReport ");
+        htmlReporter.config().setReportName("Name of the Report Comes here ");
         // Dark Theme
         htmlReporter.config().setTheme(Theme.DARK);
         htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/test-output/extent-config.xml");
 
     }
+
     //This method is to capture the screenshot and return the path of the screenshot.
     public static String getScreenShot(WebDriver driver, String screenshotName) throws IOException {
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -68,71 +54,28 @@ public class Sanity {
         return destination;
     }
 
+    @BeforeMethod
+    public void setup() {
+        System.setProperty("webdriver.chrome.driver",".\\Drivers\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.google.com/");
+    }
 
     @Test
-    public void sanity() throws Exception {
-        int randomNum = 10 + (int) (Math.random() * 1000);
-        /***************Browse to google map**********************************/
-        System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
+    public void verifyTitle() {
+        logger = extent.createTest("To verify Google Title");
+        Assert.assertEquals(driver.getTitle(),"Google");
+    }
 
-        String myjson= myrest.GetJsonLine();
-        myrest.parse(myjson);
-        logger = extent.createTest("To Test get Json");
-        logger.createNode("Before get lat lng from REST");
-
-        //Assert.assertEquals(driver.getTitle(),"Google");
-        String lat = Double.toString(myrest.getLat());
-        String lng = Double.toString(myrest.getLng());
-        String searchtext = myrest.getSearch();
-        String mySearch = lat + "," + lng ;
-        String myURL = "https://www.google.com/maps";
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(myURL);
-
-     WebElement searchbox=  driver.findElement(By.id("searchboxinput"));
-        Actions builder = new Actions(driver);
-        Actions actions = builder;
-        actions.moveToElement(searchbox);
-        actions.click();
-        actions.sendKeys(mySearch);
-     actions.sendKeys(Keys.ENTER);
-        logger.createNode("After search for cordinates");
-
-
-     Action seriesOfActions = actions.build();
-     seriesOfActions.perform() ;
-     WebElement searchresult = driver.findElement(By.cssSelector("#pane div:nth-child(5) span.widget-pane-link"));
-     String actualString = searchresult.getText();
-     System.out.println(actualString);
-     assertTrue(actualString.contains(searchtext));
-
-     //System.out.println(result.getText());
- }
-
-    public static void setDriverAccordingToBrowser(String browser,String URL){
-        switch (browser) {
-            case "Chrome":
-                System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
-                driver = new ChromeDriver();
-                driver.manage().window().maximize();
-                break;
-            case "FireFox":
-                System.setProperty("webdriver.gecko.driver", ".\\Drivers\\geckodriver-v0.24.0-win64");
-                driver = new FirefoxDriver();
-//                ((FirefoxDriver)driver).getKeyboard().pressKey(Keys.F11);
-                break;
-            case "Edge": //Fix so will ajust to edge
-                System.setProperty("webdriver.edge.driver", ".\\Drivers\\Edge\\MicrosoftWebDriver.exe");
-                driver = new EdgeDriver();
-                break;
-            default:
-                System.setProperty("webdriver.edge.driver", ".\\Drivers\\chromedriver.exe");
-                driver = new ChromeDriver();
-                driver.manage().window().maximize();
-                  break;
-        }
-        driver.get(URL);
+    @Test
+    public void verifyLogo() {
+        logger = extent.createTest("To verify Google Logo");
+        boolean img = driver.findElement(By.xpath("//img[@id='hplogo']")).isDisplayed();
+        logger.createNode("Image is Present");
+        Assert.assertTrue(img);
+        logger.createNode("Image is not Present");
+        Assert.assertFalse(img);
     }
 
     @AfterMethod
@@ -153,9 +96,6 @@ public class Sanity {
         }
         else if(result.getStatus() == ITestResult.SUCCESS)
         {
-            String screenshotPath = getScreenShot(driver, result.getName());
-            //To add it in the extent report
-            logger.log(Status.PASS,"Test Case Passes Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
             logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));
         }
         driver.quit();
@@ -166,4 +106,3 @@ public class Sanity {
         extent.flush();
     }
 }
-
